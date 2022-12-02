@@ -10,7 +10,7 @@
 	<!-- Bootstrap CSS -->
 	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
 	<link rel="stylesheet" href="css/style.css">
-	<title>Spring Best Movies</title>
+	<title>Spring Best Songs</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-9 py-4 d-flex justify-content-start border border-dark">
 				<a href="/" class="btn btn-primary px-4 ms-2 me-4">Home</a>
-				<a href="/best_songs" class="btn btn-primary px-4">Songs</a>
+				<a href="/best_movies"class="btn btn-primary px-4">Movies</a>
             </div>
         </div>
     </div>
@@ -33,10 +33,10 @@
             <div class="row border border-dark py-5">
                 <div class="col d-flex justify-content-center">
 	                <div>
-	                    <h5 class="text-center">Best Movies</h5>
+	                    <h5 class="text-center">Best Songs</h5>
 	                    <div class="card" style="width: 28rem;">						  
 						  <ul
-							th:replace="frag :: movies(${movies})"
+							th:replace="frag :: songs(${songs})"
 						  >
 						  </ul>
 						</div>

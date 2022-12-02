@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.generation.italy.demo.pojo.Movie;
+import org.generation.italy.demo.pojo.Song;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,5 +36,21 @@ public class MainController {
 		model.addAttribute("movies", movies);
 
 		return "best_movies"; 
+	}
+	
+	@RequestMapping("/best_songs")
+	public String getBestSongs(Model model) {
+		String name = "markcaf";
+		model.addAttribute("name", name);
+		
+		List<Song> songs = new ArrayList<>();
+		songs.add(new Song(1, "Steve Vai - Bad Horsie"));
+		songs.add(new Song(5, "Eminem - Lose Yourself"));
+		songs.add(new Song(8, "Linkin Park - Faint"));
+		songs.add(new Song(2, "Jimi Hendrix - Lover Man"));
+
+		model.addAttribute("songs", songs);
+
+		return "best_songs"; 
 	}
 }
