@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<ul class="list-group list-group-flush"
+		th:fragment="movies(ms)"
+	>
+		<li class="list-group-item"
+			th:each="movie : ${ms}"
+			th:object="${movie}"
+		>
+			[[*{id}]] - [[*{name}]]
+		</li>
+	</ul>
+	
+</body>
+</html>
